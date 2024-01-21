@@ -1,0 +1,558 @@
+/* product-detail.php */
+.spec-row {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+.spec-row:last-of-type {
+    border-bottom: none;
+}
+.spec-name {
+    font-size: 14px;
+    font-weight: 700;
+   /* color: rgba(0, 0, 0, 0.6);*/
+    color: #6b6b6b;
+    background-color: #e3e3e3;
+    padding: 10px;
+    text-align: center;
+  /*  border: 1px solid rgba(0, 0, 0, 0.5);*/
+}
+.spec-value {
+    font-size: 14px;
+    color: #000;
+    padding: 15px;
+    padding-right: 40px;
+    padding-left: 40px;
+    /*border: 1px solid rgba(0, 0, 0, 0.5);*/
+    max-width: 500px;
+}
+.val-name{
+    font-weight: 500;
+}
+#tabs-spec{
+    margin-left: 0;
+    margin-right: 0;
+}
+form #newsError{
+    color: #ed3e3e;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.contactError{
+    color: red;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.error{
+    color: red;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.rate-error{
+    color: red;
+    font-size: 16px;
+    margin-top: 10px;
+}
+#sentMessage{
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #04ba2e;
+}
+#pr-img-wrapper{
+    background-color: #FFFFFF;
+    text-align: center;
+    height: 100%;
+}
+.disc-head{
+    color: red;
+}
+.discount-perc{
+    color: white;
+    background-color: red;
+    width: 100px;
+    padding: 5px 0px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    z-index: 99;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+.discount-perc-single{
+    color: white;
+    background-color: red;
+    width: 100px;
+    padding: 5px 0px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.relate-disc{
+    left: -10px;
+}
+.product-price{
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+.activePrice{
+    margin-right: 20px;
+}
+.oldPrice{
+    opacity: 0.5;
+}
+#surveys-wrapper{
+    margin-top: 20px;
+    width: 40%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#surveys-wrapper a{
+    color: #3D464D;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #FFD333;
+    cursor: pointer;
+}
+#surveys-wrapper i {
+    margin-left: 5px;
+}
+.single-survey-wrapper{
+    width: 100%;
+    padding: 50px 0px 100px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFD333;
+}
+.survey-title h3{
+    text-align: center;
+}
+.error-msg{
+    color: red;
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: center;
+}
+.successMsg{
+    font-size: 18px;
+    margin-top: 20px;
+}
+.survey-content p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+.survey-option{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.survey-option input[type='radio'] {
+    width: 17px;
+    height: 17px;
+}
+.survey-option label{
+    font-size: 17px;
+    margin-bottom: 0;
+    margin-left: 10px;
+    color: #333333;
+    font-weight: bold;
+}
+.survey-btns{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+}
+.survey-btns button{
+    padding: 10px 50px;
+    font-weight: bold;
+    background: transparent;
+    border: 3px solid #333333;
+}
+.acc-icon{
+    font-size: 20px;
+    background-color: #f2be00;
+    padding: 10px;
+    border-radius: 50%;
+}
+#user-acc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#user-acc a{
+    color: #5c5b5b;
+    text-decoration: none;
+}
+#user-acc p{
+    margin: 0;
+    margin-right: 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
+#searchedProducts{
+    position: absolute;
+    width: 100%;
+    background-color: #ededeb;
+    z-index: 100;
+    border-radius: 0 0 10px 10px;
+    overflow: scroll;
+    max-height: 500px;
+}
+.singleProduct{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 33.33%;
+}
+.singleProduct a img{
+    width: 100%;
+}
+.singleProduct a{
+   width: 20%;
+}
+.searchedProductInfo{
+    width: 50%;
+    padding-left: 30px;
+}
+.searchedProductPrice{
+    display: flex;
+}
+.searchedProductPrice h5{
+    margin: 0;
+    margin-right: 10px;
+}
+.searchedProductOldPrice{
+    opacity: 0.5;
+}
+.searchedProductDiscount{
+    width: 30%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.searchedProductDiscount p{
+    position: static;
+    color: white;
+    background-color: red;
+    width: 70px;
+    padding: 2px 0px;
+    text-align: center;
+    font-size: 17px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+.splitLine{
+    width: 95%;
+    height: 1px;
+    background-color: #000;
+}
+.splitLine:last-child{
+    display: none;
+}
+#noProducts{
+    text-align: center;
+    margin: 0px;
+    padding: 10px 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.pagination li{
+    cursor: pointer;
+}
+.single-pr-rating i{
+    cursor: pointer;
+}
+#review-msg{
+    font-size: 16px;
+    margin-top: 10px;
+}
+.Popup{
+    position: fixed;
+    top: 50%;
+    right: -20%;
+/*    background-color: darkseagreen;*/
+    color: white;
+    width: auto;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    transition: ease-in-out 1s;
+}
+
+.Popup p{
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+.inStock{
+    color: green;
+}
+.OutOfStock{
+    color: red;
+}
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.7); /* Add a semi-transparent background color */
+}
+
+.loader {
+    width: 100px;
+    height: 100px;
+    z-index: 9999;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.checkError{
+    color: red;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.account-settings .user-profile {
+    margin: 0 0 1rem 0;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+.account-settings .user-profile .user-avatar {
+    margin: 0 0 1rem 0;
+}
+.account-settings .user-profile .user-avatar img {
+    width: 90px;
+    height: 90px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+}
+.account-settings .user-profile h5.user-name {
+    margin: 0 0 0.5rem 0;
+}
+.account-settings .user-profile h6.user-email {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #9fa8b9;
+}
+.account-settings .about {
+    margin: 2rem 0 0 0;
+    text-align: center;
+}
+.account-settings .about h5 {
+    margin: 0 0 15px 0;
+    color: #007ae1;
+}
+.account-settings .about p {
+    font-size: 0.825rem;
+}
+.form-control {
+    border: 1px solid #cfd1d8;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-size: .825rem;
+    background: #ffffff;
+    color: #2e323c;
+}
+.card {
+    background: #ffffff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 0;
+    margin-bottom: 1rem;
+}
+.order-details{
+    display: none;
+}
+#orders{
+    display: none;
+}
+.moreDetails{
+    color: #f2be00;
+    font-weight: bold;
+}
+.user-avatar{
+    width: 90px;
+    height: 90px;
+    border: 1px solid #000;
+    margin: auto auto!important;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+.addPhoto{
+    position: absolute;
+    font-size: 17px;
+    bottom: 0;
+    right: 0;
+    padding: 12px 11px;
+    background-color: #5a6268;
+    color: #FFFFFF;
+    border-radius: 50% 0 0 0;
+    cursor: pointer;
+}
+.addPhoto:hover{
+    background-color: #343a40;
+}
+#file{
+    display: none;
+}
+#profilePhoto{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0px 10px;
+}
+#profilePhoto img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid #333333;
+    transition: all 0.3s ease;
+}
+#profilePhoto img:hover{
+    border: 1px solid #f2be00;
+}
+.btnEdit{
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.btnDelete{
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.btnInsert{
+    cursor: pointer;
+}
+.btnUpdate{
+    cursor: pointer;
+}
+.columnName{
+    font-weight: bold;
+    font-size: 17px;
+    padding: 0px 20px;
+}
+.colValue{
+    font-size: 17px;
+    padding: 10px 20px;
+}
+.mBody label{
+    margin-top: 15px!important;
+    margin-bottom: 2px!important;
+}
+.searchedProductInfo a:hover{
+    text-decoration: none;
+}
+.modal-content{
+    border-radius: 10px;
+}
+#compareWrapper{
+    width: 80%;
+    transform: translate(10%, 0);
+    height: 150px;
+    border-radius: 20px 20px 0px 0px;
+    bottom: 0;
+    z-index: 100;
+    background-color: #858585;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+}
+.closeCompareSingle{
+    color: white!important;
+    font-size: 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px;
+    cursor: pointer;
+}
+.compareProduct{
+    border: 1px dashed #f2be00;
+    width: 25%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.linkCompairedPr{
+  color: #333333;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 30px;
+}
+.linkCompairedPr:hover{
+    color: #333333;
+    text-decoration: none;
+  }
+#btnCompare{
+    margin-left: 100px;
+}
+.singlePrForCompare{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.compareProduct .compProdName{
+    margin-bottom: 0;
+    color: white;
+}
+@media screen and (max-width: 1150px){
+   #surveys-wrapper{
+       width: 80%;
+   }
+}
+@media screen and (max-width: 500px){
+    #surveys-wrapper{
+        width: 98%;
+    }
+    .single-question-wrapper{
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+@media screen and (max-width: 991px){
+.link{
+    text-align: center;
+    padding: 10px 0px!important;
+}
+}
+
